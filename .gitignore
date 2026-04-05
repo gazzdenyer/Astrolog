@@ -1,0 +1,63 @@
+# Backend
+backend/target/
+backend/.idea/
+backend/*.iml
+backend/.DS_Store
+backend/uploads/
+backend/logs/
+
+# Maven
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/.cache/
+frontend/.parcel-cache
+frontend/coverage/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+*.swp
+*.swo
+.vscode/settings.json
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+

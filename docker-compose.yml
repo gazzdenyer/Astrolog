@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: astrolog_postgres
+    environment:
+      POSTGRES_DB: astrolog
+      POSTGRES_USER: astrolog_user
+      POSTGRES_PASSWORD: astrolog_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - astrolog_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U astrolog_user -d astrolog"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  astrolog_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: astrolog_backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/astrolog
+      SPRING_DATASOURCE_USERNAME: astrolog_user
+      SPRING_DATASOURCE_PASSWORD: astrolog_password
+      ASTRONOMY_API_KEY: ${ASTRONOMY_API_KEY}
+      STORAGE_TYPE: local
+      STORAGE_LOCAL_PATH: /app/uploads
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - astrolog_network
+    volumes:
+      - ./backend/uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/star-charts/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  astrolog_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: astrolog_frontend
+    environment:
+      VITE_API_BASE_URL: http://localhost:8080/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - astrolog_backend
+    networks:
+      - astrolog_network
+
+volumes:
+  postgres_data:
+
+networks:
+  astrolog_network:
+    driver: bridge
+

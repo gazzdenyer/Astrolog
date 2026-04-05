@@ -1,0 +1,189 @@
+.observation-log-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.observation-log-container h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background-color: #1a2a3a;
+  border: 2px solid var(--border-color);
+  color: var(--light-text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--darker-bg);
+}
+
+.filter-input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #1a2a3a;
+  color: var(--light-text);
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+.observations-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.no-observations {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+  font-style: italic;
+}
+
+.observations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.observations-table thead {
+  background-color: #1a2a3a;
+  border-bottom: 2px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.observations-table th {
+  padding: 0.75rem;
+  text-align: left;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.observations-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.observation-row {
+  cursor: pointer;
+}
+
+.observation-row:hover {
+  background-color: rgba(0, 212, 255, 0.05);
+}
+
+.observations-table td {
+  padding: 0.75rem;
+  color: var(--light-text);
+}
+
+.coordinates {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+}
+
+.actions {
+  text-align: right;
+}
+
+.delete-btn {
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: var(--error-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar for observations list */
+.observations-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.observations-list::-webkit-scrollbar-track {
+  background: #0f1419;
+  border-radius: 4px;
+}
+
+.observations-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.observations-list::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .observations-table {
+    font-size: 0.85rem;
+  }
+
+  .observations-table th,
+  .observations-table td {
+    padding: 0.5rem;
+  }
+
+  .coordinates {
+    display: none;
+  }
+}
+
