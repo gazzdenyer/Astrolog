@@ -1,7 +1,9 @@
 # AstroLog - Architecture Diagram
 
-**Status**: ✅ Complete and Running
+**Status**: ✅ Complete, live, and on GitHub
+**GitHub**: https://github.com/gazzdenyer/Astrolog
 **Backend**: Running on port 8080 ✅
+**Frontend**: Running on port 3000 ✅
 **Build**: All issues resolved ✅
 
 ## 🏗️ System Architecture

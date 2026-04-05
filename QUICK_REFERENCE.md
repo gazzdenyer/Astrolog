@@ -1,6 +1,9 @@
 # AstroLog - Quick Reference Guide
 
-**Status**: ✅ Backend running on port 8080 - Ready for production
+**Status**: ✅ Complete, running, and on GitHub
+**GitHub**: https://github.com/gazzdenyer/Astrolog
+**Backend**: http://localhost:8080/api
+**Frontend**: http://localhost:3000
 
 ## 🚀 Get Started in 5 Minutes
 

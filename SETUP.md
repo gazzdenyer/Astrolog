@@ -2,9 +2,22 @@
 
 Complete setup instructions for the AstroLog star chart application.
 
-**Current Status**: ✅ Backend running on port 8080 ✅ Frontend running on port 3000 ✅ App fully functional
+**Current Status**: ✅ Complete, built, tested, running, and on GitHub
+**GitHub Repository**: https://github.com/gazzdenyer/Astrolog
+**The application is already configured and running with H2 in-memory database. No additional setup is required to use it!**
 
-The application is **already configured and running** with H2 in-memory database. No additional setup is required to use it!
+## Quick Start
+
+The app is **already running**! Just open your browser to http://localhost:3000
+
+## Clone from GitHub
+
+To get the latest code from GitHub:
+
+```bash
+git clone https://github.com/gazzdenyer/Astrolog.git
+cd Astrolog
+```
 
 ## Table of Contents
 

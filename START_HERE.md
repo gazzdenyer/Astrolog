@@ -1,14 +1,25 @@
 # 🎉 AstroLog - START HERE! 🎉
 
-## ✅ Your Star Chart Application is COMPLETE & RUNNING
+## ✅ Your Star Chart Application is COMPLETE, RUNNING & ON GITHUB
 
 Welcome! I have successfully created a **complete, fully functional AstroLog Star Chart Application** for you!
 
-**Latest Status**: Backend running ✅ | Frontend running ✅ | App fully functional ✅
+**Latest Status**: Backend running ✅ | Frontend running ✅ | App fully functional ✅ | **GitHub: https://github.com/gazzdenyer/Astrolog** ✅
 
 ---
 
-## ⚡ QUICK START (2 Minutes)
+## 🚀 GitHub Repository
+
+Your project is now live on GitHub! You can access it at:
+```
+https://github.com/gazzdenyer/Astrolog
+```
+
+**Clone the repository:**
+```bash
+git clone https://github.com/gazzdenyer/Astrolog.git
+cd Astrolog
+```
 
 The app is **already running and fully functional!** Just open your browser:
 

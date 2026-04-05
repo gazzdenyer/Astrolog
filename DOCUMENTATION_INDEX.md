@@ -2,7 +2,10 @@
 
 Welcome to the AstroLog Star Chart Application! This index helps you find the right documentation for your needs.
 
-**Project Status**: ✅ COMPLETE - Backend running on port 8080
+**Project Status**: ✅ COMPLETE, LIVE & ON GITHUB
+**GitHub Repository**: https://github.com/gazzdenyer/Astrolog
+**Backend**: Running on http://localhost:8080/api ✅
+**Frontend**: Running on http://localhost:3000 ✅
 
 ---
 

@@ -1,8 +1,10 @@
 # AstroLog - Complete File Index
 
-**Status**: ✅ Complete and Ready for Deployment
+**Status**: ✅ Complete, built, tested, and on GitHub
+**GitHub**: https://github.com/gazzdenyer/Astrolog
 **Build Status**: ✅ Fixed and successful
 **Backend**: ✅ Running on port 8080
+**Frontend**: ✅ Running on port 3000
 
 ## 📋 Project Structure Overview
 

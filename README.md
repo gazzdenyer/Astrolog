@@ -2,7 +2,11 @@
 
 A full-stack web application for generating and logging astronomical star charts. Built with Spring Boot backend and React frontend.
 
-**Status**: ✅ **COMPLETE & FULLY FUNCTIONAL** - Running on ports 8080 (backend) and 3000 (frontend)
+**Status**: ✅ **COMPLETE, FULLY FUNCTIONAL & ON GITHUB**
+
+**GitHub Repository**: https://github.com/gazzdenyer/Astrolog
+**Running**: Backend on port 8080 | Frontend on port 3000
+**Database**: H2 In-Memory
 
 ## Features
 
